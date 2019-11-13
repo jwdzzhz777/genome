@@ -1,0 +1,13 @@
+node_modules
+.gitignore
+.DS_Store
+.vscode
+npm-debug.log
+npm-error.log
+yarn-debug.log
+yarn-error.log
+
+app/**/*.ts
+config/**/*.ts
+app/**/*.map
+config/**/*.map

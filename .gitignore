@@ -1,0 +1,16 @@
+npm-debug.log
+npm-error.log
+yarn-debug.log
+yarn-error.log
+node_modules/
+.idea/
+.DS_Store
+.vscode
+*.lock
+
+app/**/*.js
+test/**/*.js
+config/**/*.js
+app/**/*.map
+test/**/*.map
+config/**/*.map

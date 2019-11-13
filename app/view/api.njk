@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>title</title>
+    </head>
+    <style>
+        body {
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .box {
+            background-color: #e7f6ec;
+            max-width: 960px;
+            width: 100%;
+            margin: 20px 0;
+        }
+        .title {
+            font-size: 16px;
+            height: 36px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #c3e8d1;
+        }
+        .title .methods {
+            height: 100%;
+            line-height: 36px;
+            padding: 0 5px;
+            background-color: #10a54a;
+            color: white;
+        }
+        .title .path {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .title .desc {
+            color: #10a54a;
+            padding-right: 20px;
+        }
+        .content {
+            padding: 20px;
+            border: 1px solid #c3e8d1;
+        }
+        .content p {
+            margin: 0;
+        }
+        .content .value {
+            margin-left: 20px;
+        }
+        .content .field {
+            color: #10a54a;
+            font-weight: bold;
+        }
+    </style>
+  <body>
+    {% for item in data %}
+        <div class="box">
+            <div class="title">
+                <div class="methods">
+                    {{ item.methods.splice(',') }}
+                </div>
+                <div class="path">
+                    {{ item.path }}
+                </div>
+                <div class="desc">
+                    {{ item.description }}
+                </div>
+            </div>
+            <div class="content">
+                {% for key, val in item %}
+                    {% if val and key !== 'description' and key !== 'methods' and key !== 'path' %}
+                        <div class="field">
+                            {{key}} {
+                        </div>
+                        {% for field, data in val %}
+                            <div class="value">
+                                <span>{{field}}：</span><span>{{data}}</span>
+                            </div>
+                        {% endfor %}
+                        <p>}</p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+  </body>
+</html>
