@@ -1,26 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "target": "es6",
     "module": "commonjs",
-    "strict": true,
-    "noImplicitAny": false,
+    "jsx": "react",
+    "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "charset": "utf8",
-    "allowJs": false,
+    "preserveConstEnums": true,
     "pretty": true,
-    "noEmitOnError": false,
+    "declaration": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "strictPropertyInitialization": false,
-    "noFallthroughCasesInSwitch": true,
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "inlineSourceMap": true,
-    "importHelpers": true,
-    "moduleResolution": "node"
+    "importHelpers": true
   },
   "exclude": [
     "app/view",
