@@ -1,9 +1,13 @@
 {
-  "name": "egg-genome",
-  "version": "0.0.1",
+  "name": "@jwdzzhz777/egg-genome",
+  "version": "0.0.1-beta.121",
   "description": "",
   "main": "index.js",
+  "eggPlugin": {
+    "name": "genome"
+  },
   "scripts": {
+    "pub": "yarn tsc && yarn publish --non-interactive && yarn clean",
     "tsc": "tsc -p tsconfig.json",
     "clean": "tsc -b --clean"
   },
@@ -19,5 +23,21 @@
     "tslint-config-egg": "^1.0.0",
     "typescript": "^3.7.2"
   },
-  "keywords": []
+  "files": [
+    "index.js",
+    "app.js",
+    "*.d.ts",
+    "app/view/**",
+    "app/**/*.js",
+    "config/**/*.js",
+    "app/**/*.d.ts",
+    "config/**/*.d.ts"
+  ],
+  "keywords": [
+    "egg",
+    "egg-plugin",
+    "eggPlugin",
+    "genome",
+    "egg-genome"
+  ]
 }
