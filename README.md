@@ -2,7 +2,10 @@
 
 
 plugin for Egg.js. use to generate api doc
-> NOTE: 没有集成 `swagger` ,此插件的实现可能会对系统造成影响
+> NOTE: <br>
+> 没有集成 `swagger` <br>
+> 此插件的实现可能会对系统造成影响 <br>
+> 使用了 `symbol.description` ,请在 node 11.0.0 以上的版本使用。
 
 [![NPM version][npm-image]][npm-url]
 [![996.icu][icu-image]][icu-url]
@@ -12,7 +15,7 @@ plugin for Egg.js. use to generate api doc
 [icu-image]: https://img.shields.io/badge/link-996.icu-red.svg
 [icu-url]: https://996.icu
 
-## InstallÂ
+## Install
 
 ```bash
 $ npm install @jwdzzhz777/egg-genome
