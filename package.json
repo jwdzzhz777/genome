@@ -1,10 +1,13 @@
 {
   "name": "@jwdzzhz777/egg-genome",
-  "version": "0.0.1-beta.121",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "eggPlugin": {
-    "name": "genome"
+    "name": "genome",
+    "optionalDependencies": [
+      "nunjucks"
+    ]
   },
   "scripts": {
     "pub": "yarn tsc && yarn publish --non-interactive && yarn clean",
