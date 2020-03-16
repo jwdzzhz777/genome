@@ -15,5 +15,9 @@ exports.default = () => {
         ].join(',')
     };
 
+    config.genome = {
+        path: '/api'
+    }
+
     return config;
 };

@@ -2,7 +2,9 @@ import { Context } from 'egg';
 
 export default () => {
     return async (ctx: Context, next: () => Promise<any>) => {
-        if (ctx.path === '/api') {
+        let path = ctx.app.config.genome.path;
+        if (!path) return await next();
+        if (ctx.path === path) {
             let params = await ctx.helper.getApiParams(ctx, next);
 
             Object.keys(params).forEach(path => {
